@@ -1,0 +1,14 @@
+2/2/2017
+
+AngularJS
+
+ng-app  -> directive defines an AngularJS application.
+ng-model -> directive binds the value of html control to the application data
+ng-bind -> directive that binds application data to html view
+
+* you can also add data-ng- instead of just ng- (sometimes the html page will be invalid if u omit data- part)
+
+AngularJS Expressions
+
+In angular js expressions are written inside double braces {{ expression}}
+

@@ -1,0 +1,56 @@
+<html>
+
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+<script src="script.js"></script>
+
+
+
+<title>Jobin Scaria</title>
+
+</head>
+
+
+<body ng-app="myModule" ng-controller="myController">
+
+
+<div>{{message}}</div>
+<br><br>
+<select ng-model="selectedEmployee">
+  <option ng-repeat="employee in employees">{{employee.eid}}</option>
+</select>
+<input id="inp1" ng-model="newSalary" placeholder="enter new salary"></input><button ng-click="updateSalary(selectedEmployee, newSalary)">Submit</button>
+<br><br>
+<table border="2px">
+<thead>
+
+    <tr><th>First Name</th><th>Last Name</th><th>Gender</th><th>Salary</th></tr>
+</thead>
+<tbody>
+<tr ng-repeat="employee in employees">
+<td>{{employee.firstName}}</td>
+<td>{{employee.lastName}}</td>
+<td>{{employee.gender}}</td>
+<td>{{employee.salary}}</td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+<br>
+
+<br>
+
+<img ng-src="{{image}}" style="height: 100px;width: 100px;">
+
+
+<script>
+
+</script>
+
+
+</body>
+</html>
