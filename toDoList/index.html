@@ -1,0 +1,51 @@
+<html>
+
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+<script src="toDo.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+
+<title>Jobin Scaria - To Do List</title>
+
+</head>
+
+
+<body ng-app="tdlModule" ng-controller="tdlController">
+
+<h1>Below is the list of items in the to do list:</h1><br>
+<p id="msg1"></p>
+<input id="newItem1" ng-model="newItem" placeholder="item name"></input>
+<input id="newItemDesc1" ng-model="newItemDesc" placeholder="item desc"></></input>
+<button ng-click="addItem()">Add</button>
+<br><br>
+<table border="2">
+<tr>
+<th>Item ID</th>
+<th>Item Name</th>
+<th>Item Description</th>
+<th>Item Status</th>
+<th>Created Date</th>
+<th>Completed Date</th>
+<th>Mark Complete</th>
+<th>Delete</th>
+</tr>
+<tr ng-repeat="item in items">
+<td>{{item.itemID}}</td>
+<td>{{item.itemName}}</td>
+<td>{{item.itemDesc}}</td>
+<td>{{item.itemStatus}}</td>
+<td>{{item.createdDate}}</td>
+<td>{{item.completedDate}}</td>
+<td><input type="checkbox" name="isComplete" value="isComplete" ng-click="updateItem($index)"></td>
+<td><button ng-click="removeItem($index)" style="width:100%;">X</button></td>
+</tr>
+</table>
+
+<br>
+
+</body>
+
+</html>

@@ -18,6 +18,7 @@
 <div>{{message}}</div>
 <br><br>
 <select ng-model="selectedEmployee">
+  <option selected="true"></option>
   <option ng-repeat="employee in employees">{{employee.eid}}</option>
 </select>
 <input id="inp1" ng-model="newSalary" placeholder="enter new salary"></input><button ng-click="updateSalary(selectedEmployee, newSalary)">Submit</button>
