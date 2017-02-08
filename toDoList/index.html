@@ -13,15 +13,18 @@
 </head>
 
 
-<body ng-app="tdlModule" ng-controller="tdlController">
+<body ng-app="tdlModule" ng-controller="tdlController" style="margin:10px;">
 
-<h1>Below is the list of items in the to do list:</h1><br>
+<h1>TO DO LIST</h1><br>
 <p id="msg1"></p>
 <input id="newItem1" ng-model="newItem" placeholder="item name"></input>
 <input id="newItemDesc1" ng-model="newItemDesc" placeholder="item desc"></></input>
 <button class="w3-btn-floating w3-teal" ng-click="addItem()">+</button>
 <br><br>
 <table border="2">
+<tr>
+<th colspan="8">TO DO LIST</th>
+</tr>
 <tr>
 <th>Item ID</th>
 <th>Item Name</th>
@@ -39,7 +42,7 @@
 <td>{{item.itemStatus}}</td>
 <td>{{item.createdDate}}</td>
 <td>{{item.completedDate}}</td>
-<td><input type="checkbox" name="isComplete" value="isComplete" ng-click="updateItem($index)"></td>
+<td style="text-align:center;"><input type="checkbox" name="isComplete" value="isComplete" ng-click="updateItem($index)"></td>
 <td><button class="w3-btn-floating" ng-click="removeItem($index)" style="width:100%;">X</button></td>
 </tr>
 </table>
