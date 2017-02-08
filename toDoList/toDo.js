@@ -45,9 +45,17 @@ var myApp = angular.module("tdlModule",[])
 		return max+1;		
 	};
 	
+	function updateItemIds(){
+		for(var i=0;i<$scope.items.length;i++)
+		{
+			$scope.items[i].itemID = i+1;
+		}		
+	};
+	
 	   
     $scope.removeItem = function (x) {
         $scope.items.splice(x, 1);
+		updateItemIds();
     }
 	
 	$scope.updateItem = function (x) {	

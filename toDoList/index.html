@@ -5,7 +5,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
 <script src="toDo.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 
 
 <title>Jobin Scaria - To Do List</title>
@@ -19,7 +19,7 @@
 <p id="msg1"></p>
 <input id="newItem1" ng-model="newItem" placeholder="item name"></input>
 <input id="newItemDesc1" ng-model="newItemDesc" placeholder="item desc"></></input>
-<button ng-click="addItem()">Add</button>
+<button class="w3-btn-floating w3-teal" ng-click="addItem()">+</button>
 <br><br>
 <table border="2">
 <tr>
@@ -40,7 +40,7 @@
 <td>{{item.createdDate}}</td>
 <td>{{item.completedDate}}</td>
 <td><input type="checkbox" name="isComplete" value="isComplete" ng-click="updateItem($index)"></td>
-<td><button ng-click="removeItem($index)" style="width:100%;">X</button></td>
+<td><button class="w3-btn-floating" ng-click="removeItem($index)" style="width:100%;">X</button></td>
 </tr>
 </table>
 
